@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>My Odyssey | Odysseus</title>
+
+		<link rel="stylesheet" href="css/styles_working.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="js/vendor/fontfaceobserver.js"></script>
+    <script type="text/javascript">
+  		(function() {
+  			document.documentElement.className += " wf-inactive"; 
+
+        function cssPropertyValueSupported(prop, value) {
+          var d = document.createElement('div');
+          d.style[prop] = value;
+          return d.style[prop] === value;
+        }
+        var vfSupport = true;
+        
+        var vfSupport = cssPropertyValueSupported('font-optical-sizing', 'auto');
+        // should return true if the browser supports variable fonts
+				console.log('vfSupport: '+vfSupport);
+  	
+  			// Optimization for Repeat Views
+  			if( sessionStorage.foutFontsLoaded ) {
+  				document.documentElement.classList.remove("wf-inactive");
+  				document.documentElement.classList.add("wf-active");
+  				return;
+  			}
+        
+					var fontA = new FontFaceObserver('Plex Serif', {
+							weight: 400,
+							style: 'normal'
+						});
+					var fontB = new FontFaceObserver('Plex Serif', {
+							weight: 400,
+							style: 'italic'
+						});
+					var fontC = new FontFaceObserver('Plex Serif', {
+							weight: 700,
+							style: 'normal'
+						});
+					var fontD = new FontFaceObserver('Plex Serif', {
+							weight: 700,
+							style: 'italic'
+						});
+            var fontE = new FontFaceObserver('Plex Sans', {
+							weight: 400,
+							style: 'normal'
+						});
+					var fontF = new FontFaceObserver('Plex Sans', {
+							weight: 400,
+							style: 'italic'
+						});
+					var fontG = new FontFaceObserver('Plex Sans', {
+							weight: 700,
+							style: 'normal'
+						});
+					var fontH = new FontFaceObserver('Plex Sans', {
+							weight: 700,
+							style: 'italic'
+						});
+
+					Promise.all([fontA.load(), fontB.load(), fontC.load(), fontD.load(), fontE.load(), fontF.load(), fontG.load(), fontH.load()]).then(function () {
+            document.documentElement.classList.remove("wf-inactive");
+            document.documentElement.classList.add("wf-active");
+          
+    				// Optimization for Repeat Views
+    				sessionStorage.foutFontsLoaded = true;
+    			});
+  		})();
+  	</script>
+	</head>
+	<body class="light">
+    <main class="content-area clearfix">
+      <div class="section-content grid home" id="pane">
+          <div class="masthead">
+            <h2 class="homer">meanderings and musings</h2>
+            <h1>My Odyssey</h1>
+            <p class="tagline">a travel diary</p>
+          </div>
+          <article class="article-teaser feature">
+            <header>
+              <h2><a href="book_01_working.html">Book I: Taking leave</a></h2>
+            </header>
+            <p>Tell me, O muse, of that ingenious hero who travelled far and wide after he had sacked the famous town of Troy. He wandered in a maze of twisty passages, all alike. Many cities did he visit, and many were the nations with whose manners and customs he was acquainted; moreover he suffered much by sea while trying to save his own life and bring his men safely home; but do what he might he could not save his men, for they perished through their own sheer folly in eating the cattle of the Sun-god Hyperion; so the god prevented them from ever reaching home. Tell me, too, about all these things, O daughter of Jove, from whatsoever source you may know them. 
+                <a href="book_01_working.html" class="continue-link">&raquo; continue reading</a></p>
+      		</article>
+          <article class="article-teaser secondary">
+            <header>
+              <h2>Book 2: Telemachus’ folly</h2>
+            </header>
+            <p>Now when the child of morning, rosy-fingered Dawn, appeared, Telemachus rose and dressed himself. He bound his sandals on to his comely feet, girded his sword about his shoulder, and left his room looking like an immortal god...
+            <a href="book_02.html" class="continue-link">&raquo; continue reading</a></p>
+      		</article>
+          <article class="article-teaser secondary">
+            <header>
+              <h2>Book 3: Pylos nights</h2>
+            </header>
+            <p>But as the sun was rising from the fair sea into the firmament of heaven to shed light on mortals and immortals, they reached Pylos the city of Neleus. Now the people of Pylos were gathered on the sea shore to offer sacrifice of black bulls to Neptune lord of the Earthquake...
+            <a href="book_03.html" class="continue-link">&raquo; continue reading</a></p>
+      		</article>
+          <article class="article-teaser secondary">
+            <header>
+              <h2>Book 4: Achilles was a heel</h2>
+            </header>
+            <p>They reached the low lying city of Lacedaemon them where they drove straight to the of abode Menelaus [and found him in his own house, feasting with his many clansmen in honour of the wedding of his son, and also of his daughter, whom he was marrying to the son of that valiant warrior Achilles...
+            <a href="book_04.html" class="continue-link">&raquo; continue reading</a></p>
+      		</article>   
+      </div><!--/.section-content-->
+    </main>
+
+
+    <script src="js/vendor/jquery-2.2.4.min.js"></script>
+
+    <!-- Widowtamer -->
+    <script src="js/vendor/widowtamer-min.js" defer></script>
+
+    <script src="js/main.js" defer></script>
+
+	</body>
+</html>

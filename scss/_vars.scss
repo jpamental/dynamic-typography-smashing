@@ -1,0 +1,11 @@
+  /* breakpoint variables */
+$bp-small: 25;
+$bp-medium: 45;
+$bp-large: 55;
+$bp-xlarge: 65;
+
+$bp-em-small: $bp-small * 1em;
+$bp-em-medium: $bp-medium * 1em;
+$bp-em-large: $bp-large * 1em;
+$bp-em-xlarge: $bp-xlarge * 1em;
+

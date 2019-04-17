@@ -1,0 +1,143 @@
+@font-face {
+  font-family: "Roboto Delta";
+  src: url('../fonts/RobotoDelta_v2-VF.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+/* Voto Serif Variable Font */
+/*
+  Variations used:
+    wght (28-194)
+    wdth (50-130)
+    OPSZ (12-72)
+*/
+@font-face {
+  font-family: 'Voto Serif GX';
+  src: url('../fonts/VotoSerifGX.woff2') format('woff2-variations');
+  font-display: swap;
+  font-stretch: 50% 130%;
+  font-weight: 28 194;
+}
+
+/* Plex Sans Variable Font */
+@font-face {
+  font-family: 'Plex Sans VF';
+  src: url('../fonts/plex-sans-vf/IBMPlexSansVar-Roman.woff2') format('woff2-variations');
+  font-display: swap;
+  font-stretch: 85% 100%;
+  font-style: normal;
+  font-weight: 100 700;
+}
+
+@font-face {
+  font-family: 'Plex Sans VF';
+  src: url('../fonts/plex-sans-vf/IBMPlexSansVar-Italic.woff2') format('woff2-variations');
+  font-display: swap;
+  font-stretch: 85% 100%;
+  font-style: italic;
+  font-weight: 100 700;
+}
+
+/* Gimlet Variable Font */
+@font-face {
+  font-family: 'Gimlet VF';
+  src: url('https://rwt.io/_demo_fonts/gimlet/Gimlet_Romans-VF.woff2') format('woff2-variations');
+  font-display: swap;
+  font-stretch: 64% 100%;
+  font-style: normal;
+  font-weight: 300 800;
+}
+
+@font-face {
+  font-family: 'Gimlet VF';
+  src: url('https://rwt.io/_demo_fonts/gimlet/Gimlet_Italics-VF.woff2') format('woff2-variations');
+  font-display: swap;
+  font-stretch: 64% 100%;
+  font-style: italic;
+  font-weight: 300 800;
+}
+
+@font-face {
+  font-family: 'Gimlet Banner VF';
+  src: url('https://rwt.io/_demo_fonts/gimlet/GimletVariableCondensedBold-VF.woff2') format('woff2-variations');
+  font-display: swap;
+  font-style: normal;
+  font-weight: normal;
+}
+
+/* static web fonts */
+@font-face {
+  font-family: 'Plex Sans';
+  src: url('../fonts/IBM-Plex-Sans/eot/IBMPlexSans-Regular.eot');
+  src: url('../fonts/IBM-Plex-Sans/eot/IBMPlexSans-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/IBM-Plex-Sans/woff2/IBMPlexSans-Regular.woff2') format('woff2'),
+       url('../fonts/IBM-Plex-Sans/woff/IBMPlexSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Plex Sans';
+  src: url('../fonts/IBM-Plex-Sans/eot/IBMPlexSans-Bold.eot');
+  src: url('../fonts/IBM-Plex-Sans/eot/IBMPlexSans-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/IBM-Plex-Sans/woff2/IBMPlexSans-Bold.woff2') format('woff2'),
+       url('../fonts/IBM-Plex-Sans/woff/IBMPlexSans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Plex Sans';
+  src: url('../fonts/IBM-Plex-Sans/eot/IBMPlexSans-Italic.eot');
+  src: url('../fonts/IBM-Plex-Sans/eot/IBMPlexSans-Italic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/IBM-Plex-Sans/woff2/IBMPlexSans-Italic.woff2') format('woff2'),
+       url('../fonts/IBM-Plex-Sans/woff/IBMPlexSans-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Plex Sans';
+  src: url('../fonts/IBM-Plex-Sans/eot/IBMPlexSans-BoldItalic.eot');
+  src: url('../fonts/IBM-Plex-Sans/eot/IBMPlexSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/IBM-Plex-Sans/woff2/IBMPlexSans-BoldItalic.woff2') format('woff2'),
+       url('../fonts/IBM-Plex-Sans/woff/IBMPlexSans-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Plex Serif';
+  src: url('../fonts/IBM-Plex-Serif/eot/IBMPlexSerif-Regular.eot');
+  src: url('../fonts/IBM-Plex-Serif/eot/IBMPlexSerif-Regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/IBM-Plex-Serif/woff2/IBMPlexSerif-Regular.woff2') format('woff2'),
+       url('../fonts/IBM-Plex-Serif/woff/IBMPlexSerif-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Plex Serif';
+  src: url('../fonts/IBM-Plex-Serif/eot/IBMPlexSerif-Bold.eot');
+  src: url('../fonts/IBM-Plex-Serif/eot/IBMPlexSerif-Bold.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/IBM-Plex-Serif/woff2/IBMPlexSerif-Bold.woff2') format('woff2'),
+       url('../fonts/IBM-Plex-Serif/woff/IBMPlexSerif-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Plex Serif';
+  src: url('../fonts/IBM-Plex-Serif/eot/IBMPlexSerif-Italic.eot');
+  src: url('../fonts/IBM-Plex-Serif/eot/IBMPlexSerif-Italic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/IBM-Plex-Serif/woff2/IBMPlexSerif-Italic.woff2') format('woff2'),
+       url('../fonts/IBM-Plex-Serif/woff/IBMPlexSerif-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Plex Serif';
+  src: url('../fonts/IBM-Plex-Serif/eot/IBMPlexSerif-BoldItalic.eot');
+  src: url('../fonts/IBM-Plex-Serif/eot/IBMPlexSerif-BoldItalic.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/IBM-Plex-Serif/woff2/IBMPlexSerif-BoldItalic.woff2') format('woff2'),
+       url('../fonts/IBM-Plex-Serif/woff/IBMPlexSerif-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}

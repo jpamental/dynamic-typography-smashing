@@ -1,0 +1,118 @@
+@import "vars";
+@import "webfonts";
+
+
+:root {
+  /* font stack */
+  --font-stack-sans: "Plex Sans", Helvetica, arial, sans-serif;
+  --font-stack-serif: "Plex Serif", Georgia, "Times New Roman", serif;
+  --font-stack-sans-vf: "Plex Sans VF", Helvetica, arial, sans-serif;
+  --font-stack-serif-vf: "Voto Serif GX", Georgia, "Times New Roman", serif;
+  --font-stack-sans-alt-vf: "Roboto Delta", Helvetica, arial, sans-serif;
+
+  --font-stack-heading: var(--font-stack-sans);
+  --font-stack-body: var(--font-stack-serif);
+
+  /* breakpoint variables */
+  --bp-small: #{$bp-small};
+  --bp-medium: #{$bp-medium};
+  --bp-large: #{$bp-large};
+  --bp-xlarge: #{$bp-xlarge};
+
+  /* colors */
+  --color-gray-dark: #414141;
+  --color-gray-dark-alpha: #41414188;
+  --color-gray-lightest: #f9f9fd;
+  --color-gray-lightest-alpha: #f9f9fd88;
+  --color-blue: #003399;
+  --color-blue-light: #ccd8ee;
+  --color-purple: #7803bb;
+  --color-purple-light: #d6c0e4;
+  --color-red: #dd2f03;
+  --color-red-light: #f79880;
+  --color-parchment: #f7e8d3;
+  --color-parchment-alpha: #f7e8d388;
+
+
+  --color-bg: var(--color-gray-lightest);
+  --color-bga: var(--color-parchment-alpha);
+  --color-text: var(--color-gray-dark);
+  --color-a-link: var(--color-blue);
+  --color-a-visited: var(--color-purple);
+  --color-a-hover: var(--color-red);
+  --color-a-active: var(--color-red);
+  --color-a-focus: var(--color-red);
+   
+  /* initial values  */
+  --text-wght: 90;
+  --text-wdth: 100;
+  --text-opsz: 16;
+  
+  /* set px value sizes */
+
+  /* initial px value for text */ 
+  --rem-px: 16;
+
+  /* set px value sizes */
+  --p-size-s-px: 16;
+  --p-size-m-px: 18;
+  --p-size-l-px: 20;
+
+  --h1-size-s-px: 40;
+  --h1-size-m-px: 56;
+  --h1-size-l-px: 72;
+
+  --h2-size-s-px: 32;
+  --h2-size-m-px: 48;
+  --h2-size-l-px: 60;
+
+  
+
+  /* set scale values */
+  --p-size-min: calc( var(--p-size-s-px) / var(--rem-px) );
+  --p-size-mid: calc( var(--p-size-m-px) / var(--rem-px) );
+  --p-size-max: calc( var(--p-size-l-px) / var(--rem-px) );
+  --p-lh-min: 1.3;
+  --p-lh-mid: 1.4;
+  --p-lh-max: 1.6;
+  --p-wdth-min: 90;
+  --p-wdth-mid: 95;
+  --p-wdth-max: 100;
+
+  --h1-size-min: calc( var(--h1-size-s-px) / var(--rem-px) );
+  --h1-size-mid: calc( var(--h1-size-m-px) / var(--rem-px) );
+  --h1-size-max: calc( var(--h1-size-l-px) / var(--rem-px) );
+  --h1-lh-min: 1.05;
+  --h1-lh-mid: 1.075;
+  --h1-lh-max: 1.1;
+  --h1-wdth-min: 85;
+  --h1-wdth-mid: 92.5;
+  --h1-wdth-max: 100;
+  --h1-wght-min: 575;
+  --h1-wght-mid: 625;
+  --h1-wght-max: 675;
+
+  --h2-size-min: calc( var(--h2-size-s-px) / var(--rem-px) );
+  --h2-size-mid: calc( var(--h2-size-m-px) / var(--rem-px) );
+  --h2-size-max: calc( var(--h2-size-l-px) / var(--rem-px) );
+  --h2-lh-min: 1.05;
+  --h2-lh-mid: 1.075;
+  --h2-lh-max: 1.1;
+  --h2-wdth-min: 85;
+  --h2-wdth-mid: 92.5;
+  --h2-wdth-max: 100;
+  --h2-wght-min: 575;
+  --h2-wght-mid: 625;
+  --h2-wght-max: 675;
+
+}
+
+
+body {
+  background-color: var(--color-bg);
+  background-image: url(../images/parchment.jpg);
+  color: var(--color-text);
+  font-family: var(--font-stack-body);
+  margin: 0;
+  padding: 0 2em 0 0.5em;
+}

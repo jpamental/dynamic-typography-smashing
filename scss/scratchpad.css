@@ -1,0 +1,908 @@
+/* -------------------- *\
+
+    Layout
+
+\* -------------------- */
+.home.grid {
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  padding-bottom: 2rem;
+  @media (min-width: $bp-em-large) {
+  }
+  > * {
+    transition: all 1s ease-in-out;
+  }
+  .masthead {
+    grid-column: 1/7;
+    @media (min-width: $bp-em-medium) {
+      grid-column: 1 / 4;
+    }
+    @media (min-width: $bp-em-large) {
+      grid-column: 1 / 3;
+    }
+  }
+  .feature {
+    grid-column: 1 / 7;
+    @media (min-width: $bp-em-medium) {
+      grid-column: 4 / 7;
+    }
+    @media (min-width: $bp-em-large) {
+      grid-column: 3 / 7;
+    }
+  }
+  .secondary {
+    grid-column: span 2;
+  }
+}
+
+
+
+/* -------------------- *\
+
+    HTML elements
+
+\* -------------------- */
+
+figure {
+  margin: 0 auto 1rem;
+  max-width: 96vw;
+  @media screen and (min-width: $bp-em-medium) {
+    max-width: 40rem;
+  }
+  @media screen and (min-width: $bp-em-large) {
+    max-width: 42rem;
+  }
+  @media screen and (min-width: $bp-em-xlarge) {
+    max-width: 44rem;
+  }
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+h1 {
+  font-family: var(--font-stack-heading);
+  font-size: calc( var(--h1-size-min) * 1em );
+  font-synthesis: none;
+  font-weight: bold;
+  line-height: var(--h1-lh-min);
+  margin: 1rem auto;
+  max-width: 96vw;
+  @media screen and (min-width: $bp-em-small) {
+    line-height: var(--h1-lh-mid);
+    font-size: calc( var(--h1-size-mid) * 1em );
+  }
+  @media screen and (min-width: $bp-em-medium) {
+    font-weight: bold;
+    max-width: 40rem;
+  }
+  @media screen and (min-width: $bp-em-large) {
+    font-weight: bold;
+    max-width: 42rem;
+  }
+  @media screen and (min-width: $bp-em-xlarge) {
+    font-size: calc( var(--h1-size-max) * 1em );
+    line-height: var(--h1-lh-max);
+    max-width: 44rem;
+  }
+}
+
+h2 {
+  font-family: var(--font-stack-heading);
+  font-size: calc( var(--h2-size-min) * 1em );
+  font-synthesis: none;
+  font-weight: bold;
+  line-height: var(--h2-lh-min);
+  margin: 1rem auto;
+  max-width: 96vw;
+  transition: all 0.5s ease-in-out;
+  @media screen and (min-width: $bp-em-small) {
+    line-height: var(--h2-lh-mid);
+    font-size: calc( var(--h2-size-mid) * 1em );
+  }
+  @media screen and (min-width: $bp-em-medium) {
+    font-weight: bold;
+    max-width: 40rem;
+  }
+  @media screen and (min-width: $bp-em-large) {
+    font-weight: bold;
+    max-width: 42rem;
+  }
+  @media screen and (min-width: $bp-em-xlarge) {
+    font-size: calc( var(--h2-size-max) * 1em );
+    line-height: var(--h2-lh-max);
+    max-width: 44rem;
+  }
+}
+
+p {
+  font-size: calc( var(--p-size-min) * 1em );
+  font-synthesis: none;
+  font-weight: normal;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  line-height: var(--p-lh-min);
+  margin: 0 auto;
+  max-width: 96vw;
+  @media screen and (min-width: $bp-em-small) {
+    line-height: var(--p-lh-mid);
+    font-size: calc( var(--p-size-mid) * 1em );
+  }
+  @media screen and (min-width: $bp-em-medium) {
+    max-width: 40rem;
+  }
+  @media screen and (min-width: $bp-em-large) {
+    max-width: 42rem;
+  }
+  @media (min-width: $bp-em-xlarge) {
+    font-size: calc( var(--p-size-max) * 1em );
+    line-height: var(--p-lh-max);
+    max-width: 44rem;
+  }
+  + p {
+    margin-top: 1em;
+  }
+}
+
+
+a {
+  &:link {
+    color: var(--color-a-link);
+  }
+  &:visited {
+    color: var(--color-a-visited);
+  }
+  &:hover {
+    color: var(--color-a-hover);
+  }
+  &:active {
+    color: var(--color-a-active);
+  }
+  &:focus {
+    color: var(--color-a-focus);
+  }
+}
+
+/* -------------------- *\
+
+    Components
+
+\* -------------------- */
+
+/* components */
+
+.masthead {
+  background-image: url(../images/nestors_sacrifice.png);
+  background-size: 100%;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding: 1rem 1rem 15rem 1rem;
+  h1 {
+    max-width: none;
+    --h1-lh-min: 1;
+    --h1-lh-mid: 1;
+    --h1-lh-max: 1;
+    --h1-size-s-px: 24;
+    --h1-size-m-px: 60;
+    --h1-size-l-px: 100;
+    --h1-size-min: calc( var(--h1-size-s-px) / var(--rem-px) );
+    --h1-size-mid: calc( var(--h1-size-m-px) / var(--rem-px) );
+    --h1-size-max: calc( var(--h1-size-l-px) / var(--rem-px) );
+}
+  h2.homer {
+    --h2-wght-min: 375;
+    --h2-wght-mid: 425;
+    --h2-wght-max: 475;
+    --h2-size-s-px: 18;
+    --h2-size-m-px: 20;
+    --h2-size-l-px: 22;
+    --h2-size-min: calc( var(--h2-size-s-px) / var(--rem-px) );
+    --h2-size-mid: calc( var(--h2-size-m-px) / var(--rem-px) );
+    --h2-size-max: calc( var(--h2-size-l-px) / var(--rem-px) );
+    margin: 0;
+  }
+  .tagline {
+    margin-top: -1rem;
+    @media (min-width: $bp-em-large) {
+      margin-top: -2rem;
+    }
+  }
+}
+
+.article-teaser {
+  background-color: var(--color-bga);
+  padding: 0 0.5rem;
+  &.feature {
+    h2 {
+      max-width: none;
+    }
+    p {
+      margin-left: 0;
+    }
+  }
+  &.secondary {
+    p {
+      --p-lh-min: 1.1;
+      --p-lh-mid: 1.2;
+      --p-lh-max: 1.3;
+      --p-size-s-px: 14;
+      --p-size-m-px: 14;
+      --p-size-l-px: 16;
+      --p-size-min: calc( var(--p-size-s-px) / var(--rem-px) );
+      --p-size-mid: calc( var(--p-size-m-px) / var(--rem-px) );
+      --p-size-max: calc( var(--p-size-l-px) / var(--rem-px) );
+    }
+    h2 {
+      --h2-size-s-px: 18;
+      --h2-size-m-px: 22;
+      --h2-size-l-px: 24;
+      --h2-size-min: calc( var(--h2-size-s-px) / var(--rem-px) );
+      --h2-size-mid: calc( var(--h2-size-m-px) / var(--rem-px) );
+      --h2-size-max: calc( var(--h2-size-l-px) / var(--rem-px) );
+    }
+  }
+  .continue-link {
+    display: inline-block;
+    font-size: 0.75em;
+    font-style: italic;
+  }
+}
+
+/* drop cap */
+.article-detail p:first-of-type::first-letter {
+  border: solid 1px #a1a1a1;
+  float: left;
+  font-size: 6.125em;
+  font-weight: 125;
+  line-height: 0.65;
+  /* line-height is set smaller than 1 to even out display in Safari and Chrome; Firefox seems unaffected */
+  margin: 0 0.1em 0 -0.1em;
+  padding: 0.1em;
+}
+
+/* first line style */
+.article-detail p:first-of-type:first-line {
+  font-weight: 150;
+  font-variant: small-caps;
+}
+
+
+/* -------------------- *\
+
+    FontsFace Observer Update
+
+\* -------------------- */
+<script type="text/javascript">
+(function() {
+  document.documentElement.className += " wf-inactive"; 
+
+  function cssPropertyValueSupported(prop, value) {
+    var d = document.createElement('div');
+    d.style[prop] = value;
+    return d.style[prop] === value;
+  }
+  var vfSupport = true;
+  
+  var vfSupport = cssPropertyValueSupported('font-optical-sizing', 'auto');
+  // should return true if the browser supports variable fonts
+  console.log('vfSupport: '+vfSupport);
+
+  // Optimization for Repeat Views
+  if( sessionStorage.foutFontsLoaded ) {
+    document.documentElement.classList.remove("wf-inactive");
+    document.documentElement.classList.add("wf-active");
+    return;
+  }
+  
+  if( vfSupport == true ) {
+    var fontA = new FontFaceObserver('Plex Sans VF', {
+        weight: 400,
+        style: 'normal'
+      });
+      var fontB = new FontFaceObserver('Plex Sans VF', {
+        weight: 400,
+        style: 'italic'
+      });
+    var fontC = new FontFaceObserver('Voto Serif GX', {
+        weight: 90,
+        style: 'normal'
+      });
+
+    Promise.all([fontA.load(), fontB.load(), fontC.load()]).then(function () {
+      document.documentElement.classList.remove("wf-inactive");
+      document.documentElement.classList.add("wf-active");
+    
+      // Optimization for Repeat Views
+      sessionStorage.foutFontsLoaded = true;
+    });
+  } else {
+    var fontA = new FontFaceObserver('Plex Serif', {
+        weight: 400,
+        style: 'normal'
+      });
+    var fontB = new FontFaceObserver('Plex Serif', {
+        weight: 400,
+        style: 'italic'
+      });
+    var fontC = new FontFaceObserver('Plex Serif', {
+        weight: 700,
+        style: 'normal'
+      });
+    var fontD = new FontFaceObserver('Plex Serif', {
+        weight: 700,
+        style: 'italic'
+      });
+      var fontE = new FontFaceObserver('Plex Sans', {
+        weight: 400,
+        style: 'normal'
+      });
+    var fontF = new FontFaceObserver('Plex Sans', {
+        weight: 400,
+        style: 'italic'
+      });
+    var fontG = new FontFaceObserver('Plex Sans', {
+        weight: 700,
+        style: 'normal'
+      });
+    var fontH = new FontFaceObserver('Plex Sans', {
+        weight: 700,
+        style: 'italic'
+      });
+
+    Promise.all([fontA.load(), fontB.load(), fontC.load(), fontD.load(), fontE.load(), fontF.load(), fontG.load(), fontH.load()]).then(function () {
+      document.documentElement.classList.remove("wf-inactive");
+      document.documentElement.classList.add("wf-active");
+    
+      // Optimization for Repeat Views
+      sessionStorage.foutFontsLoaded = true;
+    });
+  }
+})();
+</script>
+
+
+
+/* -------------------- *\
+
+     Variable Fonts
+
+\* -------------------- */
+@supports (font-variation-settings: normal) {
+  :root {
+    --font-stack-heading: var(--font-stack-sans-vf);
+    --font-stack-body: var(--font-stack-serif-vf);
+  }
+  h1 {
+    --text-opsz: var(--h1-size-s-px);
+    --text-wght: 575;
+    font-size: calc( var(--h1-size-min) * 1em );
+    font-stretch: calc( var(--h1-wdth-min) * 1% );
+    font-variation-settings: 'opsz' var(--text-opsz);
+    font-weight: var(--h1-wght-min);
+    @media screen and (min-width: $bp-em-small) {
+      line-height: calc(( var(--h1-lh-min) * 1em ) + ( var(--h1-lh-max) - var(--h1-lh-min) ) * ((100vw - ( var(--bp-small) * 1em )) / ( var(--bp-xlarge) - var(--bp-small) )));
+      font-size: calc(( var(--h1-size-min) * 1em ) + ( var(--h1-size-max) - var(--h1-size-min) ) * ((100vw - ( var(--bp-small) * 1em )) / ( var(--bp-xlarge) - var(--bp-small) )));
+    }
+    @media screen and (min-width: $bp-em-medium) {
+      --text-opsz: var(--h1-size-m-px);
+      font-stretch: calc( var(--h1-wdth-mid) * 1% );
+      font-weight: var(--h1-wght-mid);
+    }
+    @media screen and (min-width: $bp-em-large) {
+      font-weight: var(--h1-wght-max);
+    }
+    @media screen and (min-width: $bp-em-xlarge) {
+      --text-opsz: var(--h1-size-l-px);
+      font-size: calc( var(--h1-size-max) * 1em );
+      font-stretch: calc( var(--h1-wdth-max) * 1% );
+      line-height: var(--h1-lh-max);
+    }
+  }
+
+  h2 {
+    --text-opsz: var(--h2-size-s-px);
+    --text-wght: 575;
+    font-size: calc( var(--h2-size-min) * 1em );
+    font-stretch: calc( var(--h2-wdth-min) * 1% );
+    font-variation-settings: 'opsz' var(--text-opsz);
+    font-weight: var(--h2-wght-min);
+    @media screen and (min-width: $bp-em-small) {
+      line-height: calc(( var(--h2-lh-min) * 1em ) + ( var(--h2-lh-max) - var(--h2-lh-min) ) * ((100vw - ( var(--bp-small) * 1em )) / ( var(--bp-xlarge) - var(--bp-small) )));
+      font-size: calc(( var(--h2-size-min) * 1em ) + ( var(--h2-size-max) - var(--h2-size-min) ) * ((100vw - ( var(--bp-small) * 1em )) / ( var(--bp-xlarge) - var(--bp-small) )));
+    }
+    @media screen and (min-width: $bp-em-medium) {
+      --text-opsz: var(--h2-size-m-px);
+      font-stretch: calc( var(--h2-wdth-mid) * 1% );
+      font-weight: var(--h2-wght-mid);
+      max-width: 40rem;
+    }
+    @media screen and (min-width: $bp-em-large) {
+      font-weight: var(--h2-wght-max);
+      max-width: 42rem;
+    }
+    @media screen and (min-width: $bp-em-xlarge) {
+      --text-opsz: var(--h2-size-l-px);
+      font-size: calc( var(--h2-size-max) * 1em );
+      font-stretch: calc( var(--h2-wdth-max) * 1% );
+      line-height: var(--h2-lh-max);
+      max-width: 44rem;
+    }
+  }
+
+  p {
+    --text-opsz: var(--p-size-s-px);
+    --text-wdth: calc( var(--p-vf-wdth) * .9 );
+    font-size: calc( var(--p-size-min) * 1em );
+    font-stretch: calc( var(--p-wdth-min) * 1% );
+    font-synthesis: none;
+    font-weight: var(--text-wght);
+    font-variation-settings: 'opsz' var(--text-opsz);
+    @media screen and (min-width: $bp-em-small) {
+      line-height: calc(( var(--p-lh-min) * 1em ) + ( var(--p-lh-max) - var(--p-lh-min) ) * ((100vw - ( var(--bp-small) * 1em )) / ( var(--bp-xlarge) - var(--bp-small) )));
+      font-size: calc(( var(--p-size-min) * 1em ) + ( var(--p-size-max) - var(--p-size-min) ) * ((100vw - ( var(--bp-small) * 1em )) / ( var(--bp-xlarge) - var(--bp-small) )));
+    }
+    @media screen and (min-width: $bp-em-medium) {
+      --text-opsz: var(--p-size-m-px);
+      font-stretch: calc( var(--p-wdth-mid) * 1% );
+      max-width: 40rem;
+    }
+    @media screen and (min-width: $bp-em-large) {
+      max-width: 42rem;
+    }
+    @media (min-width: $bp-em-xlarge) {
+      --text-opsz: var(--p-size-l-px);
+      font-size: calc( var(--p-size-max) * 1em );
+      font-stretch: calc( var(--p-wdth-max) * 1% );
+      line-height: var(--p-lh-max);
+      max-width: 44rem;
+    }
+    + p {
+      margin-top: 1em;
+    }
+  }
+}
+
+
+/* -------------------- *\
+
+     Dark Mode
+
+\* -------------------- */
+:root {
+  --color-text-darkmode: #f9f9fd;
+  --color-bg-darkmode: #414141;
+  --color-bg-darkmode-alpha: #41414188;
+  --letter-spacing-darkmode: 0.015em;  
+}
+.dark {
+  --color-text: var(--color-text-darkmode);
+  --color-bg: var(--color-bg-darkmode);
+  --color-bga: var(--color-bg-darkmode-alpha);
+  --color-a-link: var(--color-blue-light);
+  --color-a-visited: var(--color-purple-light);
+  --color-a-hover: var(--color-red-light);
+  --color-a-active: var(--color-red-light);
+  --color-a-focus: var(--color-red-light);
+  background-image: none;
+}
+.dark p {
+    --text-wght: 95;
+    letter-spacing: var(--letter-spacing-darkmode);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: var(--color-text-darkmode);
+    --color-bg: var(--color-bg-darkmode);
+    --color-bga: var(--color-bg-darkmode-alpha);
+    --color-a-link: var(--color-blue-light);
+    --color-a-visited: var(--color-purple-light);
+    --color-a-hover: var(--color-red-light);
+    --color-a-active: var(--color-red-light);
+    --color-a-focus: var(--color-red-light);
+  }
+  body {
+    background-image: none;
+  }
+  p {
+    --text-wght: 95;
+    letter-spacing: var(--letter-spacing-darkmode);
+  }
+}
+
+/* -------------------- *\
+
+     Accessibility Panel
+
+\* -------------------- */
+
+/* Add to top of HTML body */
+<div id="accessibility_panel" class="accessibility-panel">
+<a href="#" id="panel-toggle" class="panel-toggle"><h3 class="label">Accessibility Aids</h3></a>
+<div class="button-grouping">
+  <a href="#" id="toggle-dark" class="toggle-dark button off">Dark Mode</a>
+  <a href="#" id="toggle-contrast" class="toggle-contrast button off">Contrast</a>
+  <a href="#" id="toggle-size" class="toggle-size button off">Large Text</a>
+  <a href="#" id="toggle-spacing" class="toggle-spacing button off">Spacing</a>
+</div>
+</div>
+
+
+.accessibility-panel {
+  background-color: #e1e1e1;
+  border-top-left-radius: 0.25em;
+  border-bottom-left-radius: 0.25em;
+  position: fixed;
+  top: 1em;
+  right: -10.1rem;
+  padding: 0;
+  z-index: 99;
+  display: grid;
+  grid-template-columns: 1.9em 1fr;
+  width: 12rem;
+  transition: right .3s ease-in-out;
+  .accessibility-panel-open & {
+    right: 0;
+  }
+  .panel-toggle {
+    color: #212121;
+    background-color: #d1d1d1;
+    border-top-left-radius: 0.25em;
+    border-bottom-left-radius: 0.25em;
+    display: block;
+    margin: 0;
+    padding: 0.25em;
+    text-decoration: none;
+    writing-mode: vertical-lr;
+    &:hover,
+    &:focus {
+      background-color: #c1c1c1;
+    }
+  }
+  .label {
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  .button-grouping {
+    padding: 1em;
+  }
+}
+.button {
+  background-color: #fefafa;
+  background-image: linear-gradient(#ffffff, #ede9e9);
+  border-radius: 0.5em;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  color: #383838;
+  display: block;
+  font-size: 1rem;
+  font-family: "Plex Sans VF", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  padding: 0.25em;
+  &:link,
+  &:visited {
+    color: var(--color-blue);
+  }
+}
+.button:hover {
+  background-color: #e4e1e1;
+  background-image: linear-gradient(#fefafa, #cbc7c7);
+  color: var(--color-red);
+}
+.toggle-fonts {
+  position: fixed; 
+  top: 0.5em; 
+  right: 0.5em; 
+  z-index: 999;
+}
+.button.on:after {
+  content: ": on";
+}
+.button.off:after {
+  content: ": off";
+}
+
+
+/* -------------------- *\
+
+     High Contrast Mode
+
+\* -------------------- */
+.contrast {
+  .article-detail {
+    --color-text: #212121;
+    --color-bg: #fafafe;
+  }
+  p {
+      --text-wght: 110;
+      letter-spacing: 0.005em;
+  }
+}
+
+
+/* -------------------- *\
+
+     Big Text Mode
+
+\* -------------------- */
+.bigtext {
+  --p-lh-min: 1.4;
+  --p-lh-mid: 1.5;
+  --p-lh-max: 1.6;
+  --p-size-s-px: 20;
+  --p-size-m-px: 24;
+  --p-size-l-px: 28;
+  --p-size-min: calc( var(--p-size-s-px) / var(--rem-px) );
+  --p-size-mid: calc( var(--p-size-m-px) / var(--rem-px) );
+  --p-size-max: calc( var(--p-size-l-px) / var(--rem-px) );
+}
+
+/* -------------------- *\
+
+     Spacing Mode
+
+\* -------------------- */
+.spacing {
+  --p-lh-min: 2.2;
+  --p-lh-mid: 2.4;
+  --p-lh-max: 2.6;
+}
+.spacing p {
+  word-spacing: 0.75em;
+}
+
+
+/* -------------------- *\
+
+     Book Mode
+
+\* -------------------- */
+.scroll-buttons-container {
+  display: none;
+}
+
+
+@supports (scroll-snap-align: start) {
+  main {
+    overflow: hidden; 
+  }
+
+  .section-content.main {
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    scroll-behavior: smooth; 
+  }
+  .article-detail {
+    columns: 95vw auto;
+    column-gap: 0;
+    height: 85vh; 
+    orphans: 2;
+    widows: 2;
+    padding-top: 3em;
+    position: relative;
+    > header {
+      margin: -3em 0 0 0;
+      padding-top: 1rem; 
+      h1 {
+        line-height: 3rem;
+        padding: 0 .5rem;
+        @media only screen and (min-width: $bp-em-small) {
+          line-height: 3rem; 
+        }
+        @media only screen and (min-width: 34.15em) {
+          line-height: 5rem; 
+        }
+        @media only screen and (min-width: $bp-em-large) {
+          line-height: 7rem; 
+        }
+      }
+    }
+    p {
+      padding-left: 1em;
+      padding-right: 1em; 
+      + p {
+        margin-top: 0;
+        text-indent: 2em;  
+      }
+    }
+
+    /* paragraph count */
+    counter-reset: paragraph 1;
+    p + p {
+      counter-increment: paragraph;
+      &::before {
+        content: counter(paragraph);
+        font-family: var(--font-stack-sans);
+        font-size: 0.75rem;
+        font-weight: 300;
+        float: left;
+        margin-left: -2rem;
+        line-height: 2.5;
+        @supports (scroll-snap-align: start) {
+          margin-left: -6rem;
+        }
+      }
+    }
+
+  }
+  .scroll-buttons-container {
+    display: block;
+    bottom: 0;
+    left: 0;
+    padding: .5em 1em;
+    position: absolute;
+    width: 97vw; 
+    z-index: 99;
+  }
+
+  .scroll-buttons {
+    float: right; 
+    button {
+      --text-wght: 500;
+      border-radius: 0.25em;
+      border: none;
+      display: inline-block;
+      font-family: var(--font-stack-sans);
+      font-size: 1.125em;
+      font-weight: 650;
+      padding: 0.25em 0.5em;
+    }
+  }
+
+  .pager-wrapper {
+    display: flex;
+    width: calc( 100vw * var(--pageCount));
+    &--page {
+      background-color: transparent;
+      border-right: solid 1px black;
+      float: left;
+      height: 10px;
+      width: 97vw;
+      scroll-snap-align: start;
+      position: relative;
+      z-index: 10;
+    }
+  }
+}
+
+/* -------------------- *\
+
+     Mod Theme Mode
+
+\* -------------------- */
+/* Add just above 'main' element */
+<div class="theme-bar">
+Theme alternate: 
+<a href="#" id="toggle-theme-mod" class="toggle-theme-mod off">Mod theme</a>
+</div>
+
+
+.theme-mod {
+    --font-stack-serif-mod: "Gimlet VF", Georgia, "Times New Roman", serif;
+    --font-stack-serif-mod-header: "Gimlet Banner VF", Georgia, "Times New Roman", serif;
+
+    --font-stack-heading: var(--font-stack-serif-mod-header);
+    --font-stack-body: var(--font-stack-serif-mod);
+    background-image: none;
+  h1 {
+    @media screen and (min-width: $bp-em-medium) {
+      --text-opsz: var(--h1-size-m-px);
+    }
+    @media screen and (min-width: $bp-em-xlarge) {
+      --text-opsz: var(--h1-size-l-px);
+    }
+      
+  }
+  .home.grid {
+    h1 {
+      --h1-size-s-px: 42;
+      --h1-size-m-px: 56;
+      --h1-size-l-px: 180;
+    
+      --h1-size-min: calc( var(--h1-size-s-px) / var(--rem-px) );
+      --h1-size-mid: calc( var(--h1-size-m-px) / var(--rem-px) );
+      --h1-size-max: calc( var(--h1-size-l-px) / var(--rem-px) );
+      color: var(--color-gray-dark-alpha);
+      @media (prefers-color-scheme: dark) {
+        color: var(--color-gray-lightest-alpha);
+      }
+    }
+  }
+  &.dark h1 {
+    color: var(--color-gray-lightest-alpha);
+  }
+  
+  p {
+    --text-wght: 400;
+    @media screen and (min-width: 25em) {
+      --text-wght: 375;
+    }
+    @media screen and (min-width: 45em) {
+      --text-wght: 350;
+    }
+    @media screen and (min-width: 55em) {
+      --text-wght: 330;
+    }
+  }
+  /* layout */
+  .home.grid {
+    .masthead {
+      grid-column: 1/4;
+      @media (min-width: $bp-em-large) {
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+      }
+    }
+    .feature {
+      grid-column: 4 / 7;
+      @media (min-width: $bp-em-large) {
+        grid-column: 3 / 7;
+        grid-row: 1 / 2;
+      }
+    }
+    .secondary {
+      grid-column: span 2;
+    }
+  }
+
+  /* component styles */
+  .masthead {
+    background-color: transparent;
+    background-image: url(../images/nestors_sacrifice.png);
+    background-size: 65%;
+    background-position: top right;
+    padding-bottom: 5rem;
+  }
+  .article-teaser {
+    --color-bga: var(--color-bga);
+    @media (prefers-color-scheme: dark) {
+      --color-bga: var(--color-bg-darkmode-alpha);
+    }
+
+  }
+  &.dark .article-teaser {
+    --color-bga: var(--color-bg-darkmode-alpha);
+  }
+  .feature {
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+    shape-outside: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+    &:before {
+      content: " ";
+      display: block;
+      float: left;
+      height: 100%;
+      width: 35%;
+      shape-outside: polygon(0 0, 100% 0, 50% 100%, 0 100%);
+    }
+  }
+}
+.theme-bar {
+  background-color: #333;
+  color: #fff;
+  font-family: var(--font-stack-sans);
+  font-size: 0.92rem;
+  font-weight: 450;
+  padding: 0.5rem;
+  @supports (font-variation-settings: normal) {
+    font-family: var(--font-stack-sans-vf);
+  }
+  a {
+    &:link, 
+    &:visited {
+      color: #fff;
+    }
+  }
+}
+.toggle-theme-mod.on:after {
+  content: ": on";
+}
+.toggle-theme-mod.off:after {
+  content: ": off";
+}
