@@ -12,9 +12,9 @@
     "browser-sync": "^2.26.7",
     "del": "^2.0.2",
     "gulp": "^4.0.2",
-    "gulp-sass": "^3.0.0",
+    "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^1.5.2",
-    "run-sequence": "^1.1.2"
+    "run-sequence": "^2.2.1"
   },
   "dependencies": {
     "gulp-cli": "^2.2.0"
